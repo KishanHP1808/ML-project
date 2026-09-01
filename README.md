@@ -1,414 +1,324 @@
-# ML-project
-# 🏠 Machine Learning Project — House Price Prediction
+# 🤖 Machine Learning Projects
 
-A practical Machine Learning project demonstrating **Exploratory Data Analysis, Simple Linear Regression, Multiple Linear Regression, prediction, model evaluation, and Ordinary Least Squares (OLS) statistical analysis** using Python.
+A collection of practical **Machine Learning projects implemented in Python**, covering regression, classification, exploratory data analysis, model evaluation, and statistical analysis.
 
-The project uses the **Boston Housing dataset** to understand how different housing and socioeconomic factors influence house prices.
-
----
-
-## 📌 Project Overview
-
-This project explores the application of regression techniques to predict the **median value of owner-occupied homes (`MEDV`)**.
-
-The analysis focuses on important variables such as:
-
-* 🏡 Average number of rooms (`RM`)
-* 📊 Lower status population percentage (`LSTAT`)
-* 🏫 Pupil-teacher ratio (`PTRATIO`)
-
-The project also demonstrates fundamental data analysis and visualization techniques using Python.
+This repository demonstrates the application of Machine Learning algorithms to real-world datasets, with a focus on understanding the complete workflow from **data preprocessing → model building → prediction → evaluation → interpretation**.
 
 ---
 
-## 🎯 Objectives
+## 📌 Projects
 
-The main objectives of this project are to:
+### 🏠 1. House Price Prediction
 
-* Understand and explore a real-world dataset
-* Perform basic data analysis using Pandas
-* Visualize relationships between variables
-* Apply Simple Linear Regression
-* Apply Multiple Linear Regression
-* Generate house-price predictions
-* Evaluate regression performance using R²
-* Analyze model coefficients
-* Perform statistical analysis using OLS
-* Understand how individual features affect house prices
+A regression-based Machine Learning project that predicts the **median value of houses** using the Boston Housing dataset.
+
+#### 🔍 Techniques Used
+
+* Exploratory Data Analysis
+* Data visualization
+* Simple Linear Regression
+* Multiple Linear Regression
+* Model prediction
+* R² evaluation
+* Regression coefficient analysis
+* Ordinary Least Squares (OLS)
+
+#### 📊 Features Used
+
+* `RM` — Average number of rooms
+* `LSTAT` — Lower-status population percentage
+* `PTRATIO` — Pupil-teacher ratio
+
+#### 📈 Results
+
+| Model                      | Features             | R² Score |
+| -------------------------- | -------------------- | -------: |
+| Simple Linear Regression   | RM                   |   0.5525 |
+| Multiple Linear Regression | RM + LSTAT + PTRATIO |   0.6509 |
+| OLS                        | RM + LSTAT + PTRATIO |    0.679 |
+
+The project demonstrates how adding relevant features can improve predictive performance compared with using a single feature.
 
 ---
 
-## 🗂️ Project Structure
+### 📞 2. Telco Customer Churn Prediction
+
+A **classification project using Logistic Regression** to predict whether a telecom customer is likely to churn.
+
+The project works with a Telco Customer Churn dataset and demonstrates how Machine Learning can be applied to customer-retention problems.
+
+#### 🎯 Objective
+
+Predict customer churn based on customer-related information and identify patterns associated with customers leaving a telecom service.
+
+#### 🔍 Techniques
+
+* Data loading
+* Data exploration
+* Data preprocessing
+* Feature analysis
+* Logistic Regression
+* Classification
+* Model prediction
+* Model evaluation
+
+#### 💡 Business Use Case
+
+Customer churn prediction can help telecom companies:
+
+* Identify customers at risk of leaving
+* Understand customer behavior
+* Improve customer retention
+* Develop targeted offers
+* Reduce customer acquisition costs
+
+---
+
+# 🧠 Machine Learning Workflow
+
+Both projects follow a structured Machine Learning workflow:
+
+```text
+                ┌─────────────────┐
+                │     Dataset     │
+                └────────┬────────┘
+                         ↓
+                ┌─────────────────┐
+                │ Data Exploration│
+                └────────┬────────┘
+                         ↓
+                ┌─────────────────┐
+                │ Preprocessing   │
+                └────────┬────────┘
+                         ↓
+                ┌─────────────────┐
+                │ Feature         │
+                │ Selection       │
+                └────────┬────────┘
+                         ↓
+                ┌─────────────────┐
+                │ Train/Test Split│
+                └────────┬────────┘
+                         ↓
+                ┌─────────────────┐
+                │ Model Training  │
+                └────────┬────────┘
+                         ↓
+                ┌─────────────────┐
+                │   Prediction    │
+                └────────┬────────┘
+                         ↓
+                ┌─────────────────┐
+                │ Model Evaluation│
+                └────────┬────────┘
+                         ↓
+                ┌─────────────────┐
+                │ Interpretation  │
+                └─────────────────┘
+```
+
+---
+
+# 🛠️ Technologies Used
+
+| Technology          | Usage                     |
+| ------------------- | ------------------------- |
+| 🐍 Python           | Programming               |
+| 🐼 Pandas           | Data manipulation         |
+| 🔢 NumPy            | Numerical computation     |
+| 📊 Matplotlib       | Visualization             |
+| 🎨 Seaborn          | Statistical visualization |
+| 🤖 Scikit-learn     | Machine Learning          |
+| 📈 Statsmodels      | Statistical analysis      |
+| 📓 Jupyter Notebook | Development environment   |
+
+---
+
+# 📂 Repository Structure
 
 ```text
 ML-project/
 │
-├── 📓 Untitled4.ipynb
-│   └── Complete Machine Learning analysis
+├── 📓 Logistic_Regression_on_Telco_Dataset.ipynb
+│   └── Telco Customer Churn Classification
+│
+├── 📓 Machine Learning Project — House Price Prediction
+│   └── House Price Regression Analysis
 │
 └── 📄 README.md
     └── Project documentation
 ```
 
----
-
-## 🧰 Technologies & Libraries
-
-| Technology      | Purpose                        |
-| --------------- | ------------------------------ |
-| 🐍 Python       | Programming language           |
-| 🐼 Pandas       | Data manipulation and analysis |
-| 🔢 NumPy        | Numerical computation          |
-| 📊 Matplotlib   | Data visualization             |
-| 🎨 Seaborn      | Statistical visualization      |
-| 🤖 Scikit-learn | Machine Learning models        |
-| 📈 Statsmodels  | Statistical / OLS analysis     |
-| ☁️ Google Colab | Notebook execution             |
+> The notebook filenames currently present in the repository are visible on the `main` branch.
 
 ---
 
-## 📊 Dataset
+# 📊 Machine Learning Concepts Covered
 
-The project uses the **Boston Housing dataset** containing **506 observations and 14 columns**.
+This repository provides hands-on experience with:
 
-The target variable is:
+### Regression
 
-```text
-MEDV
-```
+* Simple Linear Regression
+* Multiple Linear Regression
+* Regression prediction
+* Regression coefficients
+* R² evaluation
+* OLS regression
 
-`MEDV` represents the median value of owner-occupied homes.
+### Classification
 
-### Important Features
+* Logistic Regression
+* Binary classification
+* Customer churn prediction
+* Classification model evaluation
 
-| Feature   | Description                                          |
-| --------- | ---------------------------------------------------- |
-| `CRIM`    | Per-capita crime rate                                |
-| `ZN`      | Proportion of residential land                       |
-| `INDUS`   | Proportion of non-retail business acres              |
-| `CHAS`    | Charles River dummy variable                         |
-| `NOX`     | Nitric oxide concentration                           |
-| `RM`      | Average number of rooms per dwelling                 |
-| `AGE`     | Proportion of owner-occupied units built before 1940 |
-| `DIS`     | Distance to employment centres                       |
-| `RAD`     | Accessibility to radial highways                     |
-| `TAX`     | Property-tax rate                                    |
-| `PTRATIO` | Pupil-teacher ratio                                  |
-| `B`       | Demographic-related variable                         |
-| `LSTAT`   | Lower-status population percentage                   |
-| `MEDV`    | Median house value — target                          |
+### Data Science
 
-The notebook loads the Boston Housing data directly from a public dataset URL.
+* Data loading
+* Data exploration
+* Feature selection
+* Data visualization
+* Train/test splitting
+* Model interpretation
 
 ---
 
-# 🔬 Machine Learning Workflow
+# 📈 House Price Prediction
 
-The project follows a basic Machine Learning workflow:
+The House Price project predicts `MEDV`, the median value of owner-occupied homes.
 
-```text
-Dataset
-   ↓
-Data Loading
-   ↓
-Data Exploration
-   ↓
-Data Visualization
-   ↓
-Feature Selection
-   ↓
-Train/Test Split
-   ↓
-Simple Linear Regression
-   ↓
-Multiple Linear Regression
-   ↓
-Prediction
-   ↓
-Model Evaluation
-   ↓
-OLS Statistical Analysis
-```
-
----
-
-## 1️⃣ Data Exploration
-
-The notebook performs several exploratory operations including:
-
-```python
-df.head()
-df.tail()
-df.shape
-df.columns
-df.dtypes
-df.info()
-```
-
-These operations help understand:
-
-* Dataset dimensions
-* Feature names
-* Data types
-* Number of observations
-* Dataset structure
-
----
-
-# 📈 Simple Linear Regression
-
-Simple Linear Regression is implemented using:
-
-```text
-RM → MEDV
-```
-
-Where:
-
-* `RM` = Average number of rooms
-* `MEDV` = Median house value
-
-The dataset is divided into training and testing sets using:
-
-```python
-test_size = 0.30
-```
-
-The model is trained using:
-
-```python
-LinearRegression()
-```
-
-### Result
-
-The Simple Linear Regression model achieved:
-
-```text
-R² Score: 0.5525
-```
-
-This means that the number of rooms alone explains approximately **55.25% of the variation** in the target variable for the evaluated test split.
-
-A regression-line visualization is also generated to compare the actual observations with the fitted relationship.
-
----
-
-# 📊 Multiple Linear Regression
-
-The project then improves the prediction by using multiple features:
-
-```text
-RM
-LSTAT
-PTRATIO
-```
-
-The model can be represented conceptually as:
-
-```text
-MEDV = β₀ + β₁(RM) + β₂(LSTAT) + β₃(PTRATIO)
-```
-
-The model is implemented using:
-
-```python
-mlr = LinearRegression()
-mlr.fit(X_train, y_train)
-```
-
-### Model Performance
-
-```text
-R² Score: 0.6509
-```
-
-The Multiple Linear Regression model explains approximately **65.09% of the variation** in the test data.
-
----
-
-## 📌 Model Coefficients
-
-The trained model produced the following coefficients:
-
-| Feature   | Coefficient |
-| --------- | ----------: |
-| `RM`      |     +4.4616 |
-| `LSTAT`   |     -0.6082 |
-| `PTRATIO` |     -0.8629 |
-
-### Interpretation
-
-**RM → Positive effect**
-
-More rooms are associated with higher predicted house values.
-
-**LSTAT → Negative effect**
-
-Higher `LSTAT` values are associated with lower predicted house values.
-
-**PTRATIO → Negative effect**
-
-Higher pupil-teacher ratios are associated with lower predicted house values in this model.
-
-> Note: These coefficients represent associations learned by the regression model and should not automatically be interpreted as causal effects.
-
----
-
-# 📋 Prediction Analysis
-
-The project creates a prediction table containing:
-
-```text
-Actual | Predicted
-```
-
-Example:
-
-| Actual | Predicted |
-| -----: | --------: |
-|   23.6 |     26.92 |
-|   32.4 |     30.94 |
-|   13.6 |     16.48 |
-|   22.8 |     25.25 |
-|   16.1 |     18.28 |
-
-The notebook generates predictions for the test set and compares them against actual values.
-
----
-
-# 📐 OLS Statistical Analysis
-
-In addition to Scikit-learn regression, the project uses **Statsmodels OLS** for a statistical interpretation of the model.
-
-The formula used is:
+The Multiple Linear Regression model uses:
 
 ```text
 MEDV ~ RM + LSTAT + PTRATIO
 ```
 
-The OLS model achieved:
+The model achieved an R² of approximately **0.651** on the evaluated test split, while the OLS analysis reports an R² of **0.679**.
+
+---
+
+# 📞 Telco Customer Churn
+
+The Telco project applies **Logistic Regression** to a customer churn problem.
+
+The notebook contains approximately **6,977 lines / 1 MB** of notebook content, indicating a substantially detailed analysis rather than a minimal demonstration.
+
+The main goal is to classify customers into:
 
 ```text
-R²           = 0.679
-Adjusted R²  = 0.677
-F-statistic  = 353.3
+                 Customer
+                    │
+          ┌─────────┴─────────┐
+          ↓                   ↓
+       Churned            Not Churned
+          │                   │
+          └─────────┬─────────┘
+                    ↓
+             Retention Strategy
 ```
 
-### OLS Coefficients
-
-| Variable  | Coefficient | Interpretation        |
-| --------- | ----------: | --------------------- |
-| Intercept |     18.5671 | Baseline model value  |
-| RM        |     +4.5154 | Positive relationship |
-| LSTAT     |     -0.5718 | Negative relationship |
-| PTRATIO   |     -0.9307 | Negative relationship |
-
-All three predictors have very small reported p-values in the fitted OLS model, indicating strong statistical evidence of association within this model.
-
 ---
 
-# 📊 Model Comparison
+# 🚀 Getting Started
 
-| Model                      | Features             |         R² |
-| -------------------------- | -------------------- | ---------: |
-| Simple Linear Regression   | RM                   | **0.5525** |
-| Multiple Linear Regression | RM + LSTAT + PTRATIO | **0.6509** |
-| OLS                        | RM + LSTAT + PTRATIO | **0.6790** |
-
-The results demonstrate that using multiple relevant features provides a better fit than relying on `RM` alone.
-
----
-
-# 🚀 How to Run
-
-### Option 1 — Google Colab
-
-Open the notebook directly in Google Colab and run the cells sequentially.
-
-### Option 2 — Run Locally
-
-Clone the repository:
+## 1. Clone the Repository
 
 ```bash
 git clone https://github.com/KishanHP1808/ML-project.git
 ```
 
-Navigate into the project:
+## 2. Navigate to the Project
 
 ```bash
 cd ML-project
 ```
 
-Install the required libraries:
+## 3. Install Dependencies
 
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn statsmodels
+pip install numpy pandas matplotlib seaborn scikit-learn statsmodels jupyter
 ```
 
-Launch Jupyter Notebook:
+## 4. Start Jupyter Notebook
 
 ```bash
 jupyter notebook
 ```
 
-Then open:
-
-```text
-Untitled4.ipynb
-```
-
-and execute the cells.
+Open either notebook and execute the cells sequentially.
 
 ---
 
-# 📁 Repository
+# 💻 Run with Google Colab
 
-**GitHub Repository**
-
-https://github.com/KishanHP1808/ML-project
+You can also upload the `.ipynb` files to **Google Colab** and run them without setting up a local Python environment.
 
 ---
 
 # 🔮 Future Improvements
 
-The project can be extended with:
+This repository can be expanded with more advanced Machine Learning techniques.
 
-* [ ] Feature scaling and preprocessing
-* [ ] Missing-value handling
-* [ ] Outlier detection
-* [ ] Correlation heatmap
-* [ ] Residual analysis
-* [ ] MAE, MSE and RMSE evaluation
+### 📊 Model Improvements
+
 * [ ] Cross-validation
-* [ ] Ridge Regression
-* [ ] Lasso Regression
-* [ ] Random Forest Regression
-* [ ] Gradient Boosting
 * [ ] Hyperparameter tuning
-* [ ] Model comparison dashboard
-* [ ] Interactive house-price prediction interface
-* [ ] Model deployment using Streamlit or Flask
-* [ ] Model serialization using Joblib/Pickle
+* [ ] Feature scaling
+* [ ] Feature engineering
+* [ ] Handling class imbalance
+* [ ] Outlier detection
+* [ ] Missing-value treatment
+
+### 🤖 Advanced Models
+
+* [ ] Decision Tree
+* [ ] Random Forest
+* [ ] XGBoost
+* [ ] Gradient Boosting
+* [ ] Support Vector Machine
+* [ ] K-Nearest Neighbors
+* [ ] Neural Networks
+
+### 📈 Evaluation
+
+* [ ] Accuracy
+* [ ] Precision
+* [ ] Recall
+* [ ] F1-score
+* [ ] ROC-AUC
+* [ ] Confusion Matrix
+* [ ] MAE
+* [ ] MSE
+* [ ] RMSE
+
+### 🚀 Deployment
+
+* [ ] Streamlit application
+* [ ] Flask API
+* [ ] REST API
+* [ ] Interactive prediction interface
+* [ ] Model serialization with Joblib
+* [ ] Cloud deployment
 
 ---
 
-# 🧠 Key Learnings
+# 🎓 Learning Outcomes
 
-Through this project, the following concepts are demonstrated:
+Through these projects, the following practical skills are demonstrated:
 
-* Data loading and exploration
-* Exploratory Data Analysis
-* Feature selection
-* Train/test splitting
+* Understanding Machine Learning workflows
+* Working with real-world datasets
+* Data preprocessing and exploration
 * Regression modeling
-* Prediction
-* R² model evaluation
-* Regression coefficients
-* Statistical significance
-* OLS regression
-* Model interpretation
-* Data visualization
+* Classification modeling
+* Feature selection
+* Model training
+* Making predictions
+* Evaluating model performance
+* Interpreting Machine Learning models
+* Statistical analysis
+* Python-based data science
 
 ---
 
@@ -418,17 +328,18 @@ Through this project, the following concepts are demonstrated:
 
 Machine Learning & Web Development Enthusiast
 
-GitHub:
+### 🔗 GitHub
+
 https://github.com/KishanHP1808
 
 ---
 
 ## ⭐ Support
 
-If you found this project useful, consider giving the repository a ⭐ on GitHub.
+If you find this repository useful, consider giving it a ⭐ on GitHub.
 
 ---
 
 ## 📄 License
 
-This project is intended for **educational and learning purposes**.
+This repository is intended for **educational and learning purposes**.
